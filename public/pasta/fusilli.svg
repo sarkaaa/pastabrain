@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- 4 fusilli pieces — corkscrew helix, 3 turns each, 2×2 grid -->
+  <!-- Technique: full path in darker amber (back arc stays dark),
+       then front arcs repainted in bright amber on top → 3D spiral illusion -->
+
+  <!-- Piece 1  cx=30  y=6→48 -->
+  <path d="M30,6 Q39,13 30,20 Q21,27 30,34 Q39,41 30,48"
+        stroke="#D97706" stroke-width="11" stroke-linecap="round"/>
+  <!-- Front arcs (arcs 1 & 3, right-going) on top -->
+  <path d="M30,6  Q39,13 30,20" stroke="#F59E0B" stroke-width="10" stroke-linecap="round"/>
+  <path d="M30,34 Q39,41 30,48" stroke="#F59E0B" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Piece 2  cx=90  y=6→48 -->
+  <path d="M90,6 Q99,13 90,20 Q81,27 90,34 Q99,41 90,48"
+        stroke="#D97706" stroke-width="11" stroke-linecap="round"/>
+  <path d="M90,6  Q99,13 90,20" stroke="#F59E0B" stroke-width="10" stroke-linecap="round"/>
+  <path d="M90,34 Q99,41 90,48" stroke="#F59E0B" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Piece 3  cx=30  y=66→108 -->
+  <path d="M30,66 Q39,73 30,80 Q21,87 30,94 Q39,101 30,108"
+        stroke="#D97706" stroke-width="11" stroke-linecap="round"/>
+  <path d="M30,66 Q39,73 30,80"   stroke="#F59E0B" stroke-width="10" stroke-linecap="round"/>
+  <path d="M30,94 Q39,101 30,108" stroke="#F59E0B" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Piece 4  cx=90  y=66→108 -->
+  <path d="M90,66 Q99,73 90,80 Q81,87 90,94 Q99,101 90,108"
+        stroke="#D97706" stroke-width="11" stroke-linecap="round"/>
+  <path d="M90,66 Q99,73 90,80"   stroke="#F59E0B" stroke-width="10" stroke-linecap="round"/>
+  <path d="M90,94 Q99,101 90,108" stroke="#F59E0B" stroke-width="10" stroke-linecap="round"/>
+</svg>

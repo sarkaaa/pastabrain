@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- 4 orecchiette — small ear/dome shapes with a concave depression -->
+
+  <!-- Top-left -->
+  <ellipse cx="34" cy="40" rx="24" ry="16" fill="#F59E0B" stroke="#92400E" stroke-width="1.5"/>
+  <!-- Concave interior (darker, more visible depression) -->
+  <ellipse cx="34" cy="38" rx="15" ry="9" fill="#92400E" opacity="0.45"/>
+  <!-- Rim highlight -->
+  <path d="M13 36 Q34 26 55 36" stroke="#FDE68A" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Top-right -->
+  <ellipse cx="88" cy="36" rx="24" ry="16" fill="#D97706" stroke="#92400E" stroke-width="1.5"/>
+  <ellipse cx="88" cy="34" rx="15" ry="9" fill="#92400E" opacity="0.45"/>
+  <path d="M67 32 Q88 22 109 32" stroke="#FDE68A" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Bottom-left -->
+  <ellipse cx="34" cy="84" rx="24" ry="16" fill="#F59E0B" stroke="#92400E" stroke-width="1.5"/>
+  <ellipse cx="34" cy="82" rx="15" ry="9" fill="#92400E" opacity="0.45"/>
+  <path d="M13 80 Q34 70 55 80" stroke="#FDE68A" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Bottom-right -->
+  <ellipse cx="88" cy="84" rx="24" ry="16" fill="#D97706" stroke="#92400E" stroke-width="1.5"/>
+  <ellipse cx="88" cy="82" rx="15" ry="9" fill="#92400E" opacity="0.45"/>
+  <path d="M67 80 Q88 70 109 80" stroke="#FDE68A" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+</svg>

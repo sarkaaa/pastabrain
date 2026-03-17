@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- Thick straight strands with a visible hollow hole through the centre -->
+  <!-- Strand 1 -->
+  <rect x="6"  y="0" width="14" height="120" rx="6" fill="#F59E0B"/>
+  <line x1="13" y1="0" x2="13" y2="120" stroke="#92400E" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- Strand 2 -->
+  <rect x="26" y="0" width="14" height="120" rx="6" fill="#D97706"/>
+  <line x1="33" y1="0" x2="33" y2="120" stroke="#92400E" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- Strand 3 -->
+  <rect x="46" y="0" width="14" height="120" rx="6" fill="#F59E0B"/>
+  <line x1="53" y1="0" x2="53" y2="120" stroke="#92400E" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- Strand 4 -->
+  <rect x="66" y="0" width="14" height="120" rx="6" fill="#D97706"/>
+  <line x1="73" y1="0" x2="73" y2="120" stroke="#92400E" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- Strand 5 -->
+  <rect x="86" y="0" width="14" height="120" rx="6" fill="#F59E0B"/>
+  <line x1="93" y1="0" x2="93" y2="120" stroke="#92400E" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- Strand 6 -->
+  <rect x="106" y="0" width="14" height="120" rx="6" fill="#D97706"/>
+  <line x1="113" y1="0" x2="113" y2="120" stroke="#92400E" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+</svg>

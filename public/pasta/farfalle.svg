@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- Left wing -->
+  <path d="M6 28 C10 12 44 16 58 60 C44 104 10 108 6 92 C18 74 18 46 6 28Z" fill="#F59E0B" stroke="#D97706" stroke-width="2"/>
+  <!-- Wing lines (texture) -->
+  <path d="M16 36 C30 42 46 50 58 60" stroke="#B45309" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M14 68 C30 62 46 62 58 60" stroke="#B45309" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <!-- Right wing -->
+  <path d="M114 28 C110 12 76 16 62 60 C76 104 110 108 114 92 C102 74 102 46 114 28Z" fill="#F59E0B" stroke="#D97706" stroke-width="2"/>
+  <!-- Wing lines (texture) -->
+  <path d="M104 36 C90 42 74 50 62 60" stroke="#B45309" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M106 68 C90 62 74 62 62 60" stroke="#B45309" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <!-- Center knot -->
+  <ellipse cx="60" cy="60" rx="9" ry="19" fill="#B45309"/>
+  <ellipse cx="60" cy="60" rx="4" ry="9" fill="#78350F"/>
+</svg>

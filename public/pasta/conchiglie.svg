@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- 3 conchiglie shell shapes -->
+
+  <!-- Left shell -->
+  <path d="M10 100 Q10 30 36 12 Q52 30 46 100Z"
+        fill="#F59E0B" stroke="#D97706" stroke-width="2"/>
+  <!-- Ridges radiating from the tip -->
+  <path d="M36 12 Q30 55 10 100" stroke="#D97706" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M36 12 Q36 56 28 100" stroke="#D97706" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M36 12 Q42 56 46 100" stroke="#D97706" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <!-- Shell opening at bottom -->
+  <path d="M10 100 Q28 112 46 100 Q28 90 10 100Z" fill="#B45309" opacity="0.6"/>
+
+  <!-- Right shell (slightly rotated) -->
+  <path d="M72 100 Q68 30 96 12 Q114 28 112 100Z"
+        fill="#F59E0B" stroke="#D97706" stroke-width="2"/>
+  <path d="M96 12 Q88 55 72 100" stroke="#D97706" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M96 12 Q96 56 88 100" stroke="#D97706" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M96 12 Q104 56 112 100" stroke="#D97706" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <path d="M72 100 Q92 112 112 100 Q92 90 72 100Z" fill="#B45309" opacity="0.6"/>
+</svg>

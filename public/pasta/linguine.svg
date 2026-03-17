@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- 7 linguine strands — flat oval cross-section, wider than spaghetti -->
+  <!-- Low rx gives a flatter, more oval appearance vs spaghetti's round ends -->
+  <rect x="4"  y="0" width="12" height="120" rx="2" fill="#D97706"/>
+  <rect x="20" y="0" width="12" height="120" rx="2" fill="#F59E0B"/>
+  <rect x="36" y="0" width="12" height="120" rx="2" fill="#D97706"/>
+  <rect x="52" y="0" width="12" height="120" rx="2" fill="#F59E0B"/>
+  <rect x="68" y="0" width="12" height="120" rx="2" fill="#D97706"/>
+  <rect x="84" y="0" width="12" height="120" rx="2" fill="#F59E0B"/>
+  <rect x="100" y="0" width="12" height="120" rx="2" fill="#D97706"/>
+  <!-- Flat highlight on left side of each strand showing the flat cross-section -->
+  <rect x="5"  y="0" width="4" height="120" rx="1" fill="#FBBF24" opacity="0.45"/>
+  <rect x="21" y="0" width="4" height="120" rx="1" fill="#FBBF24" opacity="0.45"/>
+  <rect x="37" y="0" width="4" height="120" rx="1" fill="#FBBF24" opacity="0.45"/>
+  <rect x="53" y="0" width="4" height="120" rx="1" fill="#FBBF24" opacity="0.45"/>
+  <rect x="69" y="0" width="4" height="120" rx="1" fill="#FBBF24" opacity="0.45"/>
+  <rect x="85" y="0" width="4" height="120" rx="1" fill="#FBBF24" opacity="0.45"/>
+  <rect x="101" y="0" width="4" height="120" rx="1" fill="#FBBF24" opacity="0.45"/>
+</svg>
