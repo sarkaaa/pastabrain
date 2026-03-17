@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useLang } from "@/components/LangProvider";
 import { type AnswerCheckResult, checkTypeAnswer } from "@/lib/shuffleQuestions";
 import type { Question } from "@/types";
 
@@ -13,6 +14,7 @@ export function TypeAnswer({ question, onAnswer }: TypeAnswerProps) {
   const [input, setInput] = useState("");
   const [result, setResult] = useState<AnswerCheckResult | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const { t } = useLang();
 
   useEffect(() => {
     inputRef.current?.focus();
@@ -37,7 +39,7 @@ export function TypeAnswer({ question, onAnswer }: TypeAnswerProps) {
           htmlFor="type-answer-input"
           className="font-medium text-sm text-stone-600 dark:text-stone-300"
         >
-          Type your answer:
+          {t.typeYourAnswer}
         </label>
         <input
           ref={inputRef}
@@ -46,7 +48,7 @@ export function TypeAnswer({ question, onAnswer }: TypeAnswerProps) {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           disabled={submitted}
-          placeholder="Your answer…"
+          placeholder={t.yourAnswerPlaceholder}
           className={`w-full rounded-xl border-2 px-4 py-3 text-base outline-none transition-colors ${
             submitted
               ? isCorrect
@@ -63,7 +65,7 @@ export function TypeAnswer({ question, onAnswer }: TypeAnswerProps) {
           disabled={input.trim() === ""}
           className="w-full rounded-xl bg-amber-500 px-6 py-3 font-semibold text-stone-900 transition-colors hover:bg-amber-400 disabled:cursor-not-allowed disabled:bg-amber-200 disabled:text-stone-500 dark:disabled:bg-stone-700 dark:disabled:text-stone-500"
         >
-          Submit answer
+          {t.submitAnswer}
         </button>
       )}
 
@@ -73,9 +75,9 @@ export function TypeAnswer({ question, onAnswer }: TypeAnswerProps) {
             isCorrect ? "text-green-700 dark:text-green-400" : "text-red-600 dark:text-red-400"
           }`}
         >
-          {result === "correct" && "✓ Correct!"}
-          {result === "close" && `✓ Close enough! (correct: ${question.correctAnswer})`}
-          {result === "incorrect" && `✗ Not quite — the answer is: ${question.correctAnswer}`}
+          {result === "correct" && t.correct}
+          {result === "close" && t.closeEnough(question.correctAnswer)}
+          {result === "incorrect" && t.incorrect(question.correctAnswer)}
         </p>
       )}
     </form>

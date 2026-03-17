@@ -1,3 +1,5 @@
+import { questionsCz } from "@/data/questions.cs";
+import type { Lang } from "@/lib/translations";
 import type { Category, Question } from "@/types";
 
 export function shuffleArray<T>(array: T[]): T[] {
@@ -22,6 +24,15 @@ export function getQuizQuestions(
   const filtered = filterByCategory(questions, category);
   const shuffled = shuffleArray(filtered);
   return shuffled.slice(0, limit);
+}
+
+export function applyTranslations(questions: Question[], lang: Lang): Question[] {
+  if (lang === "en") return questions;
+  return questions.map((q) => {
+    const tr = questionsCz[q.id];
+    if (!tr) return q;
+    return { ...q, ...tr };
+  });
 }
 
 export function normaliseAnswer(answer: string): string {
