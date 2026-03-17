@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+/* Enable class-based dark mode: applies dark: variants when any ancestor has the `dark` class */
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bg-dot-grid {
+  background-image: radial-gradient(circle, var(--color-amber-200) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
