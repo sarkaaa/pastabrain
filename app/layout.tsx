@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { LangProvider } from "@/components/LangProvider";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
@@ -41,9 +42,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         className={`${geist.className} flex min-h-screen flex-col bg-amber-50 dark:bg-stone-950`}
       >
         <ThemeProvider>
-          <Header />
-          <div className="flex-1">{children}</div>
-          <Footer />
+          <LangProvider>
+            <Header />
+            <div className="flex-1">{children}</div>
+            <Footer />
+          </LangProvider>
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useLang } from "@/components/LangProvider";
 import type { AnswerState, Question } from "@/types";
 
 type MultipleChoiceProps = {
@@ -11,6 +12,7 @@ type MultipleChoiceProps = {
 export function MultipleChoice({ question, onAnswer }: MultipleChoiceProps) {
   const [selected, setSelected] = useState<string | null>(null);
   const [answerState, setAnswerState] = useState<AnswerState>("unanswered");
+  const { t } = useLang();
 
   const options = question.options ?? [];
 
@@ -72,9 +74,7 @@ export function MultipleChoice({ question, onAnswer }: MultipleChoiceProps) {
               : "text-red-600 dark:text-red-400"
           }`}
         >
-          {answerState === "correct"
-            ? "✓ Correct!"
-            : `✗ Incorrect — the answer is: ${question.correctAnswer}`}
+          {answerState === "correct" ? t.correct : t.incorrectMulti(question.correctAnswer)}
         </p>
       )}
     </div>

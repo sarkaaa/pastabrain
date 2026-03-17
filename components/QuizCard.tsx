@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { useLang } from "@/components/LangProvider";
 import type { Question } from "@/types";
 import { MultipleChoice } from "./MultipleChoice";
 import { TypeAnswer } from "./TypeAnswer";
@@ -13,13 +14,6 @@ type QuizCardProps = {
   onNext: () => void;
   isLast: boolean;
   answered: boolean;
-};
-
-const categoryLabels: Record<string, string> = {
-  shapes: "Shapes",
-  sauces: "Sauces",
-  origins: "Origins",
-  cooking: "Cooking",
 };
 
 const difficultyColours: Record<string, string> = {
@@ -36,7 +30,21 @@ export function QuizCard({
   isLast,
   answered,
 }: QuizCardProps) {
+  const { t } = useLang();
   const nextButtonRef = useRef<HTMLButtonElement>(null);
+
+  const categoryLabels: Record<string, string> = {
+    shapes: t.catShapes,
+    sauces: t.catSauces,
+    origins: t.catOrigins,
+    cooking: t.catCooking,
+  };
+
+  const difficultyLabels: Record<string, string> = {
+    easy: t.easy,
+    medium: t.medium,
+    hard: t.hard,
+  };
 
   useEffect(() => {
     if (answered) {
@@ -53,7 +61,7 @@ export function QuizCard({
         <span
           className={`rounded-full px-3 py-1 font-semibold text-xs uppercase tracking-wide ${difficultyColours[question.difficulty]}`}
         >
-          {question.difficulty}
+          {difficultyLabels[question.difficulty] ?? question.difficulty}
         </span>
         <span className="ml-auto font-medium text-stone-500 text-xs dark:text-stone-400">
           #{questionNumber}
@@ -71,14 +79,14 @@ export function QuizCard({
           >
             <Image
               src={question.image}
-              alt={question.category === "origins" ? "Blind map hint" : "Pasta shape illustration"}
+              alt={question.category === "origins" ? t.altBlindMap : t.altPastaShape}
               width={question.category === "origins" ? 128 : 140}
               height={question.category === "origins" ? 192 : 140}
               className="h-full w-full object-contain"
             />
           </div>
           {question.category === "origins" && (
-            <p className="text-stone-500 text-xs italic dark:text-stone-400">📍 Location hint</p>
+            <p className="text-stone-500 text-xs italic dark:text-stone-400">{t.locationHint}</p>
           )}
         </div>
       )}
@@ -100,7 +108,7 @@ export function QuizCard({
           onClick={onNext}
           className="mt-2 w-full rounded-xl bg-stone-800 px-6 py-3 font-semibold text-white transition-colors hover:bg-stone-700 dark:bg-stone-100 dark:text-stone-900 dark:hover:bg-white"
         >
-          {isLast ? "See results" : "Next question →"}
+          {isLast ? t.seeResults : t.nextQuestion}
         </button>
       )}
     </div>
