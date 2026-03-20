@@ -4,6 +4,8 @@ export type T = {
   // Home page
   tagline: string;
   pickCategory: string;
+  pickDifficulty: string;
+  diffAll: string;
   catAll: string;
   catAllDesc: string;
   catShapes: string;
@@ -40,6 +42,10 @@ export type T = {
   scoreBad: string;
   playAgain: string;
   changeCategory: string;
+  // Incorrect answers review
+  reviewTitle: string;
+  yourAnswer: string;
+  correctAnswer: string;
   // Difficulty labels
   easy: string;
   medium: string;
@@ -61,6 +67,8 @@ export const translations: Record<Lang, T> = {
   en: {
     tagline: "Test your knowledge of the world's greatest food.",
     pickCategory: "Pick a category",
+    pickDifficulty: "Pick a difficulty",
+    diffAll: "All",
     catAll: "All categories",
     catAllDesc: "A mix of shapes, sauces, origins & cooking",
     catShapes: "Shapes",
@@ -92,6 +100,9 @@ export const translations: Record<Lang, T> = {
     scoreBad: "Better luck next time — more pasta awaits!",
     playAgain: "Play again",
     changeCategory: "Change category",
+    reviewTitle: "Where you went wrong",
+    yourAnswer: "Your answer",
+    correctAnswer: "Correct answer",
     easy: "easy",
     medium: "medium",
     hard: "hard",
@@ -107,6 +118,8 @@ export const translations: Record<Lang, T> = {
   cs: {
     tagline: "Otestuj svoje znalosti o nejlepším jídle světa.",
     pickCategory: "Vyber kategorii",
+    pickDifficulty: "Vyber obtížnost",
+    diffAll: "Vše",
     catAll: "Všechny kategorie",
     catAllDesc: "Mix tvarů, omáček, původu a vaření",
     catShapes: "Tvary",
@@ -138,6 +151,9 @@ export const translations: Record<Lang, T> = {
     scoreBad: "Příště to bude lepší — těstoviny na tebe čekají!",
     playAgain: "Hrát znovu",
     changeCategory: "Změnit kategorii",
+    reviewTitle: "Kde jsi chyboval(a)",
+    yourAnswer: "Tvoje odpověď",
+    correctAnswer: "Správná odpověď",
     easy: "lehké",
     medium: "střední",
     hard: "těžké",

@@ -8,7 +8,7 @@ import { QuizCard } from "@/components/QuizCard";
 import { ScoreScreen } from "@/components/ScoreScreen";
 import { questions as allQuestions } from "@/data/questions";
 import { applyTranslations, getQuizQuestions } from "@/lib/shuffleQuestions";
-import type { Category, Question } from "@/types";
+import type { Category, DifficultyFilter, IncorrectAnswer, Question } from "@/types";
 
 const QUESTIONS_PER_QUIZ = 10;
 
@@ -22,23 +22,28 @@ export function QuizPageContent() {
     ["all", "shapes", "sauces", "origins", "cooking"].includes(rawCategory) ? rawCategory : "all"
   ) as Category | "all";
 
+  const rawDifficulty = searchParams.get("difficulty") ?? "all";
+  const difficulty: DifficultyFilter = (
+    ["all", "easy", "medium", "hard"].includes(rawDifficulty) ? rawDifficulty : "all"
+  ) as DifficultyFilter;
+
   const [questions, setQuestions] = useState<Question[]>([]);
   const translatedQuestions = useMemo(() => applyTranslations(questions, lang), [questions, lang]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
-  const [, setAnswers] = useState<Record<string, string>>({});
+  const [incorrectAnswers, setIncorrectAnswers] = useState<IncorrectAnswer[]>([]);
   const [answered, setAnswered] = useState(false);
   const [finished, setFinished] = useState(false);
 
   const initQuiz = useCallback(() => {
-    const selected = getQuizQuestions(allQuestions, category, QUESTIONS_PER_QUIZ);
+    const selected = getQuizQuestions(allQuestions, category, QUESTIONS_PER_QUIZ, difficulty);
     setQuestions(selected);
     setCurrentIndex(0);
     setScore(0);
-    setAnswers({});
+    setIncorrectAnswers([]);
     setAnswered(false);
     setFinished(false);
-  }, [category]);
+  }, [category, difficulty]);
 
   useEffect(() => {
     initQuiz();
@@ -46,8 +51,18 @@ export function QuizPageContent() {
 
   function handleAnswer(isCorrect: boolean, answer: string) {
     const question = translatedQuestions[currentIndex];
-    setAnswers((prev) => ({ ...prev, [question.id]: answer }));
-    if (isCorrect) setScore((s) => s + 1);
+    if (isCorrect) {
+      setScore((s) => s + 1);
+    } else {
+      setIncorrectAnswers((prev) => [
+        ...prev,
+        {
+          question: question.question,
+          userAnswer: answer,
+          correctAnswer: question.correctAnswer,
+        },
+      ]);
+    }
     setAnswered(true);
   }
 
@@ -103,7 +118,12 @@ export function QuizPageContent() {
             />
           </>
         ) : (
-          <ScoreScreen score={score} total={translatedQuestions.length} onRetry={initQuiz} />
+          <ScoreScreen
+            score={score}
+            total={translatedQuestions.length}
+            incorrectAnswers={incorrectAnswers}
+            onRetry={initQuiz}
+          />
         )}
       </div>
     </main>

@@ -2,21 +2,25 @@
 
 import Link from "next/link";
 import { useLang } from "@/components/LangProvider";
+import type { IncorrectAnswer } from "@/types";
 
 type ScoreScreenProps = {
   score: number;
   total: number;
+  incorrectAnswers: IncorrectAnswer[];
   onRetry: () => void;
 };
 
 function getStars(score: number, total: number): string {
+  if (score === 0) return "☆☆☆";
+
   const ratio = score / total;
   if (ratio >= 0.9) return "★★★";
   if (ratio >= 0.6) return "★★☆";
   return "★☆☆";
 }
 
-export function ScoreScreen({ score, total, onRetry }: ScoreScreenProps) {
+export function ScoreScreen({ score, total, incorrectAnswers, onRetry }: ScoreScreenProps) {
   const { t } = useLang();
   const percentage = Math.round((score / total) * 100);
   const stars = getStars(score, total);
@@ -61,6 +65,32 @@ export function ScoreScreen({ score, total, onRetry }: ScoreScreenProps) {
           {t.changeCategory}
         </Link>
       </div>
+
+      {incorrectAnswers.length > 0 && (
+        <div className="w-full border-amber-100 border-t pt-6 dark:border-stone-700">
+          <h3 className="mb-4 text-left font-bold text-base text-stone-700 dark:text-stone-200">
+            {t.reviewTitle}
+          </h3>
+          <ul className="flex flex-col gap-4">
+            {incorrectAnswers.map((item) => (
+              <li
+                key={item.question}
+                className="rounded-xl border border-stone-200 bg-stone-50 p-4 text-left dark:border-stone-700 dark:bg-stone-800"
+              >
+                <p className="mb-2 font-semibold text-sm text-stone-800 dark:text-stone-100">
+                  {item.question}
+                </p>
+                <p className="text-red-600 text-sm dark:text-red-400">
+                  <span className="font-medium">{t.yourAnswer}:</span> {item.userAnswer}
+                </p>
+                <p className="text-green-700 text-sm dark:text-green-400">
+                  <span className="font-medium">{t.correctAnswer}:</span> {item.correctAnswer}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
