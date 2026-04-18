@@ -84,7 +84,7 @@ export default function HomePage() {
                 key={opt.id}
                 type="button"
                 onClick={() => setDifficulty(opt.id)}
-                className={`flex-1 rounded-xl border-2 px-3 py-2 font-semibold text-sm capitalize transition-all ${
+                className={`flex-1 cursor-pointer rounded-xl border-2 px-3 py-2 font-semibold text-sm capitalize transition-all ${
                   difficulty === opt.id
                     ? opt.activeClass
                     : "border-stone-200 bg-white text-stone-600 hover:border-stone-300 dark:border-stone-700 dark:bg-stone-900 dark:text-stone-400 dark:hover:border-stone-600"

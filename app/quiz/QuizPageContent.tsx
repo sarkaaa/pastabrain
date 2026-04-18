@@ -91,7 +91,7 @@ export function QuizPageContent() {
           <button
             type="button"
             onClick={() => router.push("/")}
-            className="font-medium text-sm text-stone-600 transition-colors hover:text-stone-800 dark:text-stone-400 dark:hover:text-stone-200"
+            className="cursor-pointer font-medium text-sm text-stone-600 transition-colors hover:text-stone-800 dark:text-stone-400 dark:hover:text-stone-200"
           >
             {t.back}
           </button>

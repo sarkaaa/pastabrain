@@ -19,7 +19,7 @@ export function Header() {
           type="button"
           onClick={toggleLang}
           aria-label={t.switchLanguage}
-          className="rounded-lg px-2 py-1.5 font-semibold text-stone-500 text-xs transition-colors hover:bg-stone-100 hover:text-stone-800 dark:text-stone-400 dark:hover:bg-stone-800 dark:hover:text-stone-100"
+          className="cursor-pointer rounded-lg px-2 py-1.5 font-semibold text-stone-500 text-xs transition-colors hover:bg-stone-100 hover:text-stone-800 dark:text-stone-400 dark:hover:bg-stone-800 dark:hover:text-stone-100"
         >
           {lang === "en" ? "CZ" : "EN"}
         </button>

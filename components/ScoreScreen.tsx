@@ -36,7 +36,7 @@ export function ScoreScreen({ score, total, incorrectAnswers, onRetry }: ScoreSc
 
   return (
     <div className="flex flex-col items-center gap-6 rounded-2xl border border-amber-100 bg-white p-8 text-center shadow-md sm:p-10 dark:border-stone-700 dark:bg-stone-900">
-      <div className="text-5xl">{stars}</div>
+      <div className="text-5xl text-amber-700 dark:text-amber-400">{stars}</div>
 
       <div>
         <p className="font-bold text-5xl text-amber-700 dark:text-amber-400">
@@ -54,7 +54,7 @@ export function ScoreScreen({ score, total, incorrectAnswers, onRetry }: ScoreSc
         <button
           type="button"
           onClick={onRetry}
-          className="flex-1 rounded-xl bg-amber-500 px-6 py-3 font-semibold text-stone-900 transition-colors hover:bg-amber-400"
+          className="flex-1 cursor-pointer rounded-xl bg-amber-500 px-6 py-3 font-semibold text-stone-900 transition-colors hover:bg-amber-400"
         >
           {t.playAgain}
         </button>
