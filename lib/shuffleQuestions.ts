@@ -1,6 +1,6 @@
 import { questionsCz } from "@/data/questions.cs";
 import type { Lang } from "@/lib/translations";
-import type { Category, Question } from "@/types";
+import type { Category, DifficultyFilter, Question } from "@/types";
 
 export function shuffleArray<T>(array: T[]): T[] {
   const copy = [...array];
@@ -16,13 +16,23 @@ export function filterByCategory(questions: Question[], category: Category | "al
   return questions.filter((q) => q.category === category);
 }
 
+export function filterByDifficulty(
+  questions: Question[],
+  difficulty: DifficultyFilter,
+): Question[] {
+  if (difficulty === "all") return questions;
+  return questions.filter((q) => q.difficulty === difficulty);
+}
+
 export function getQuizQuestions(
   questions: Question[],
   category: Category | "all",
   limit = 10,
+  difficulty: DifficultyFilter = "all",
 ): Question[] {
-  const filtered = filterByCategory(questions, category);
-  const shuffled = shuffleArray(filtered);
+  const byCategory = filterByCategory(questions, category);
+  const byDifficulty = filterByDifficulty(byCategory, difficulty);
+  const shuffled = shuffleArray(byDifficulty);
   return shuffled.slice(0, limit);
 }
 

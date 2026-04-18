@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { useLang } from "@/components/LangProvider";
-import type { Category } from "@/types";
+import type { Category, DifficultyFilter } from "@/types";
 
 type CategoryCard = {
   id: Category | "all";
@@ -11,8 +12,48 @@ type CategoryCard = {
   emoji: string;
 };
 
+type DifficultyOption = {
+  id: DifficultyFilter;
+  label: string;
+  activeClass: string;
+};
+
 export default function HomePage() {
   const { t } = useLang();
+  const [difficulty, setDifficulty] = useState<DifficultyFilter>(() => {
+    if (typeof window === "undefined") return "all";
+    const saved = localStorage.getItem("difficulty");
+    return saved && (["all", "easy", "medium", "hard"] as string[]).includes(saved)
+      ? (saved as DifficultyFilter)
+      : "all";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("difficulty", difficulty);
+  }, [difficulty]);
+
+  const difficultyOptions: DifficultyOption[] = [
+    {
+      id: "all",
+      label: t.diffAll,
+      activeClass: "bg-amber-500 text-stone-900 border-amber-500",
+    },
+    {
+      id: "easy",
+      label: t.easy,
+      activeClass: "bg-green-500 text-white border-green-500",
+    },
+    {
+      id: "medium",
+      label: t.medium,
+      activeClass: "bg-amber-400 text-stone-900 border-amber-400",
+    },
+    {
+      id: "hard",
+      label: t.hard,
+      activeClass: "bg-red-500 text-white border-red-500",
+    },
+  ];
 
   const categories: CategoryCard[] = [
     { id: "all", label: t.catAll, description: t.catAllDesc, emoji: "🍝" },
@@ -33,6 +74,28 @@ export default function HomePage() {
           <p className="text-lg text-stone-600 dark:text-stone-300">{t.tagline}</p>
         </div>
 
+        <div className="flex w-full flex-col gap-3">
+          <h2 className="text-center font-semibold text-sm text-stone-600 uppercase tracking-widest dark:text-stone-400">
+            {t.pickDifficulty}
+          </h2>
+          <div className="flex gap-2">
+            {difficultyOptions.map((opt) => (
+              <button
+                key={opt.id}
+                type="button"
+                onClick={() => setDifficulty(opt.id)}
+                className={`flex-1 cursor-pointer rounded-xl border-2 px-3 py-2 font-semibold text-sm capitalize transition-all ${
+                  difficulty === opt.id
+                    ? opt.activeClass
+                    : "border-stone-200 bg-white text-stone-600 hover:border-stone-300 dark:border-stone-700 dark:bg-stone-900 dark:text-stone-400 dark:hover:border-stone-600"
+                }`}
+              >
+                {opt.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
         <div className="flex w-full flex-col gap-4">
           <h2 className="text-center font-semibold text-sm text-stone-600 uppercase tracking-widest dark:text-stone-400">
             {t.pickCategory}
@@ -40,7 +103,7 @@ export default function HomePage() {
           {categories.map((cat) => (
             <Link
               key={cat.id}
-              href={`/quiz?category=${cat.id}`}
+              href={`/quiz?category=${cat.id}&difficulty=${difficulty}`}
               className="group flex items-center gap-4 rounded-2xl border-2 border-amber-100 bg-white px-5 py-4 transition-all hover:border-amber-300 hover:bg-amber-50 dark:border-stone-700 dark:bg-stone-900 dark:hover:border-amber-700 dark:hover:bg-stone-800"
             >
               <span className="text-3xl">{cat.emoji}</span>

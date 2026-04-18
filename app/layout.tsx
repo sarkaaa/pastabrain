@@ -13,6 +13,9 @@ const geist = Geist({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "PastaBrain — Pasta Quiz",
   description: "Test your knowledge of pasta shapes, sauces, origins, and cooking techniques.",
+  icons: {
+    icon: "/favicon.png",
+  },
   openGraph: {
     title: "PastaBrain — Pasta Quiz",
     description: "Test your knowledge of pasta shapes, sauces, origins, and cooking techniques.",
@@ -37,7 +40,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* biome-ignore lint/security/noDangerouslySetInnerHtml: required to prevent flash of unstyled theme */}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <div className="absolute inset-0 z-[-1] bg-dot-grid dark:opacity-10" aria-hidden="true"></div>
       <body
         className={`${geist.className} flex min-h-screen flex-col bg-amber-50 dark:bg-stone-950`}
       >

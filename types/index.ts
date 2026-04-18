@@ -3,6 +3,7 @@ export type QuestionType = "multiple-choice" | "type-answer";
 export type Category = "shapes" | "sauces" | "origins" | "cooking";
 
 export type Difficulty = "easy" | "medium" | "hard";
+export type DifficultyFilter = Difficulty | "all";
 
 export type Question = {
   id: string;
@@ -24,3 +25,9 @@ export type QuizSession = {
 };
 
 export type AnswerState = "unanswered" | "correct" | "incorrect";
+
+export type IncorrectAnswer = {
+  question: string;
+  userAnswer: string;
+  correctAnswer: string;
+};
