@@ -23,7 +23,7 @@ export const questionsCz: Record<string, QuestionTranslation> = {
     correctAnswer: "Penne",
   },
   "shapes-4": {
-    question: "Jak se jmenují velké, ploché, široké placky těstovin používané v lasagni?",
+    question: "Jak se jmenují velké, ploché, široké placky těstovin používané v lasagních?",
     correctAnswer: "Lasagna",
     aliases: ["Lasagne"],
   },
@@ -43,7 +43,7 @@ export const questionsCz: Record<string, QuestionTranslation> = {
   },
   "shapes-8": {
     question:
-      'Rigatoni znamená "rýhované" v italštině. Pravda nebo nepravda — rigatoni má rýhy na vnější straně?',
+      'Rigatoni znamená "rýhované" v italštině. Pravda nebo nepravda — má rigatoni rýhy na vnější straně?',
     options: ["Pravda", "Nepravda"],
     correctAnswer: "Pravda",
   },
@@ -57,7 +57,8 @@ export const questionsCz: Record<string, QuestionTranslation> = {
     correctAnswer: "Linguine",
   },
   "shapes-11": {
-    question: "Která dlouhá, plochá pásková těstovina je tradičním tvarem z Emilia-Romagna?",
+    question:
+      "Která dlouhá, plochá pásková těstovina je tradičním tvarem z oblasti Emilia-Romagna?",
     options: ["Fettuccine", "Pappardelle", "Tagliatelle", "Mafaldine"],
     correctAnswer: "Tagliatelle",
   },
@@ -77,7 +78,7 @@ export const questionsCz: Record<string, QuestionTranslation> = {
     correctAnswer: "Má dutý otvor procházející středem",
   },
   "shapes-14": {
-    question: 'Která mušlovitá těstovina nese název z italského slova pro "mušle"?',
+    question: 'Která těstovina ve tvaru mušle nese název z italského slova pro "mušle"?',
     correctAnswer: "Conchiglie",
   },
   "shapes-15": {
@@ -96,9 +97,9 @@ export const questionsCz: Record<string, QuestionTranslation> = {
     correctAnswer: "Hltavě jíst",
   },
   "shapes-18": {
-    question: "Jak se jmenuje krátká, zahnutá těstovina ve tvaru lokte, oblíbená v mac & cheese?",
+    question: 'Jak se jmenuje krátká, zahnutá těstovina ve tvaru "lokte", oblíbená v mac & cheese?',
     correctAnswer: "Macaroni",
-    aliases: ["Elbow macaroni", "Gomiti", "Loktová těstovina"],
+    aliases: ["Elbow macaroni", "Gomiti", "Makaróny"],
   },
   "shapes-19": {
     question:
@@ -107,7 +108,7 @@ export const questionsCz: Record<string, QuestionTranslation> = {
   },
   "shapes-20": {
     question:
-      'Která ultra-tenká těstovina má přezdívku "andělské vlasy" a je tenčí než vermicelli?',
+      'Která velmi tenká těstovina má přezdívku "andělské vlasy" a je tenčí než vermicelli?',
     options: ["Vermicelli", "Capellini", "Spaghettini", "Bavette"],
     correctAnswer: "Capellini",
   },
@@ -198,12 +199,12 @@ export const questionsCz: Record<string, QuestionTranslation> = {
     correctAnswer: "Červená chilli paprička",
   },
   "sauces-5": {
-    question: "Která bohatá, pomalu vařená masová omáčka pochází z Boloně?",
+    question: 'Která bohatá, pomalu vařená "masová" omáčka pochází z Boloně?',
     correctAnswer: "Bolognese",
     aliases: ["Ragù alla Bolognese", "Ragù", "Ragu"],
   },
   "sauces-6": {
-    question: "Omáčka Puttanesca tradičně obsahuje která z následujících ingrediencí?",
+    question: "Které z následujících ingrediencí obsahuje omáčka Puttanesca?",
     options: [
       "Olivy, kaparky, ančovičky, rajčata",
       "Tuňák, kaparky, citron, petržel",
@@ -239,7 +240,7 @@ export const questionsCz: Record<string, QuestionTranslation> = {
     aliases: ["Aglio olio", "Aglio, olio e peperoncino", "Aglio olio peperoncino"],
   },
   "sauces-12": {
-    question: "Pasta alle vongole obsahuje jaké mořské plody?",
+    question: "Jaké mořské plody obsahuje pasta alle vongole?",
     options: ["Slávky", "Krevety", "Kalamáry", "Škeble"],
     correctAnswer: "Škeble",
   },
