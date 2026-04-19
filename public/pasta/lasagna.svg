@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-  <!-- Bottom sheet (lightest) -->
-  <path d="M6 80 Q16 72 26 80 Q36 88 46 80 Q56 72 66 80 Q76 88 86 80 Q96 72 106 80 L114 80 L114 96 Q104 88 94 96 Q84 104 74 96 Q64 88 54 96 Q44 104 34 96 Q24 88 14 96 L6 96Z" fill="#FDE68A" stroke="#D97706" stroke-width="1.5"/>
-  <!-- Middle sheet -->
-  <path d="M6 55 Q16 47 26 55 Q36 63 46 55 Q56 47 66 55 Q76 63 86 55 Q96 47 106 55 L114 55 L114 71 Q104 63 94 71 Q84 79 74 71 Q64 63 54 71 Q44 79 34 71 Q24 63 14 71 L6 71Z" fill="#FCD34D" stroke="#D97706" stroke-width="1.5"/>
-  <!-- Top sheet (darkest / most prominent) -->
-  <path d="M6 30 Q16 22 26 30 Q36 38 46 30 Q56 22 66 30 Q76 38 86 30 Q96 22 106 30 L114 30 L114 46 Q104 38 94 46 Q84 54 74 46 Q64 38 54 46 Q44 54 34 46 Q24 38 14 46 L6 46Z" fill="#F59E0B" stroke="#D97706" stroke-width="1.5"/>
-</svg>
