@@ -171,6 +171,97 @@ export const questionsCz: Record<string, QuestionTranslation> = {
     correctAnswer: "Campania",
   },
 
+  "shapes-31": {
+    question:
+      "Která těstovina se skládá z velkých, hladkých zapečených trubiček typicky plněných masem nebo sýrem?",
+    options: ["Rigatoni", "Macaroni", "Paccheri", "Cannelloni"],
+    correctAnswer: "Cannelloni",
+  },
+  "shapes-32": {
+    question: 'Jaký tvar má těstovina "rotelle", také zvaná "ruote"?',
+    options: ["Hvězdičky", "Kola", "Mušle", "Trubičky"],
+    correctAnswer: "Kola",
+  },
+  "shapes-33": {
+    question:
+      'Casarecce je krátká, zkroucená těstovina ve tvaru svinutého pergamenu. Co znamená "casareccio"?',
+    options: ["Domácí", "Svinuté", "Rustikální", "Zkroucené"],
+    correctAnswer: "Domácí",
+  },
+  "shapes-34": {
+    question: 'Co v italštině znamená "maltagliati"?',
+    correctAnswer: "Špatně nakrájené",
+    aliases: ["Hrubě nakrájené", "Nerovnoměrně nakrájené"],
+  },
+  "shapes-35": {
+    question:
+      "Která těstovina je podobná špagetám, ale má čtvercový průřez a vyrábí se pomocí drátěného rámu podobného kytaře?",
+    options: ["Bigoli", "Pici", "Spaghetti alla chitarra", "Stringozzi"],
+    correctAnswer: "Spaghetti alla chitarra",
+  },
+  "shapes-36": {
+    question: '"Penne rigate" mají rýhy na vnější straně. Co v italštině znamená "rigate"?',
+    options: ["Hladké", "Diagonální", "Duté", "Rýhované"],
+    correctAnswer: "Rýhované",
+  },
+  "shapes-37": {
+    question:
+      "Garganelli jsou vaječné těstoviny válené přes rýhovaný hřeben do tvarů per. Z jakého italského regionu pochází?",
+    options: ["Benátsko", "Toskánsko", "Lombardie", "Emilia-Romagna"],
+    correctAnswer: "Emilia-Romagna",
+  },
+  "shapes-38": {
+    question: 'Těstovina calamarata nese název od "calamari". Čemu se svým tvarem nejvíce podobá?',
+    options: ["Chobotnicová chapadla", "Tělo kalamáry", "Váčky sépiové tinty", "Kroužky kalamárů"],
+    correctAnswer: "Kroužky kalamárů",
+  },
+  "shapes-39": {
+    question:
+      "Cavatelli jsou malé těstoviny podobné mušlím, vyráběné mačkáním a táhnutím těsta po povrchu. Který region je s nimi nejvíce spojen?",
+    options: ["Liguria", "Toskánsko", "Lombardie", "Puglia"],
+    correctAnswer: "Puglia",
+  },
+  "shapes-40": {
+    question:
+      "Anelletti jsou malé prstýnkové těstoviny a jsou slavnou specialitou jakého italského ostrova?",
+    options: ["Sardinie", "Elba", "Capri", "Sicílie"],
+    correctAnswer: "Sicílie",
+  },
+
+  "shapes-41": {
+    question:
+      "Která těstovina je v podstatě tenčí verzí spaghetti, někdy označovaná jako 'tenké spaghetti'?",
+    options: ["Vermicelli", "Bucatini", "Tagliolini", "Spaghettini"],
+    correctAnswer: "Spaghettini",
+  },
+  "shapes-42": {
+    question:
+      "Tortiglioni vypadají podobně jako rigatoni — jaký je jejich klíčový rozlišovací znak?",
+    options: [
+      "Jsou kratší a širší",
+      "Nemají středový otvor",
+      "Jejich rýhy se spirálově obtáčejí kolem trubičky",
+      "Vyrábí se z celozrnné mouky",
+    ],
+    correctAnswer: "Jejich rýhy se spirálově obtáčejí kolem trubičky",
+  },
+  "shapes-43": {
+    question:
+      "Scialatielli, čerstvé těstoviny z pobřeží Amalfi, jsou neobvyklé, protože jejich těsto obsahuje ingredienci, která v běžném těstovinovém těstě chybí, O jakou ingredienci se jedná?",
+    options: ["Sépiová tinta", "Šafrán", "Čerstvá bazalka", "Ricotta"],
+    correctAnswer: "Čerstvá bazalka",
+  },
+  "shapes-44": {
+    question: 'Co je "pettine" v tradiční výrobě těstovin?',
+    options: [
+      "Dlouhý dřevěný váleček",
+      "Kolečko na krájení těstovin",
+      "Sušák pro čerstvé pláty těstovin",
+      "Rýhovaný hřeben pro tvarování a texturování těstovin, jako jsou garganelli",
+    ],
+    correctAnswer: "Rýhovaný hřeben pro tvarování a texturování těstovin, jako jsou garganelli",
+  },
+
   // --- SAUCES ---
   "sauces-1": {
     question: "Která klasická italská omáčka se vyrábí z rajčat, česneku a bazalky?",
@@ -351,6 +442,118 @@ export const questionsCz: Record<string, QuestionTranslation> = {
     correctAnswer: "Campania",
   },
 
+  "sauces-31": {
+    question: "Z jaké hlavní ingredience se vyrábí Pasta al pomodoro?",
+    options: ["Maso", "Smetana", "Sýr", "Rajčata"],
+    correctAnswer: "Rajčata",
+  },
+  "sauces-32": {
+    question: "Která omáčka se používá jako základ v tradiční lasagne al forno?",
+    options: ["Pesto", "Aglio e olio", "Carbonara", "Besciamella (béchamel)"],
+    correctAnswer: "Besciamella (béchamel)",
+  },
+  "sauces-33": {
+    question:
+      "Pasta all'Arrabbiata je pikantní rajčatová omáčka tradičně pocházející z jakého italského města?",
+    options: ["Neapol", "Milán", "Florencie", "Řím"],
+    correctAnswer: "Řím",
+  },
+  "sauces-34": {
+    question: "Čím se Pasta alla Gricia liší od Carbonary?",
+    options: [
+      "Gricia používá smetanu místo vajec",
+      "Gricia neobsahuje sýr",
+      "Gricia neobsahuje guanciale",
+      "Gricia neobsahuje vejce",
+    ],
+    correctAnswer: "Gricia neobsahuje vejce",
+  },
+  "sauces-35": {
+    question: "Pro autentické Pesto alla Genovese se tradičně používá jaká bazalka. Jaká?",
+    options: ["Thajská bazalka", "Citronová bazalka", "Fialová bazalka", "Bazalka genovese DOP"],
+    correctAnswer: "Bazalka genovese DOP",
+  },
+  "sauces-36": {
+    question: 'Co obecně označuje "sugo" v italském vaření těstovin?',
+    options: [
+      "Pomalu vařená masová omáčka",
+      "Omáčka na smetanové bázi",
+      "Vývar z mořských plodů",
+      "Jednoduchá omáčka, typicky na bázi rajčat",
+    ],
+    correctAnswer: "Jednoduchá omáčka, typicky na bázi rajčat",
+  },
+  "sauces-37": {
+    question: '"Bigoli in salsa" jsou tradiční benátské těstoviny. Z čeho se vyrábí "salsa"?',
+    options: [
+      "Rajčata a bazalka",
+      "Smetana a bílé víno",
+      "Vlašské ořechy a bylinky",
+      "Ančovičky a cibule",
+    ],
+    correctAnswer: "Ančovičky a cibule",
+  },
+  "sauces-38": {
+    question: 'Co nejlépe popisuje "Pasta con le sarde" — tradiční sicilské těstoviny?',
+    options: [
+      "Sardinky, rajčata, olivy a kaparky",
+      "Sardinky, chilli, česnek a strouhanka",
+      "Sardinky, smetana, citron a kopr",
+      "Sardinky, divoký fenykl, šafrán, piniové oříšky a rozinky",
+    ],
+    correctAnswer: "Sardinky, divoký fenykl, šafrán, piniové oříšky a rozinky",
+  },
+  "sauces-39": {
+    question:
+      "Která ze čtyř klasických římských těstovin — Carbonara, Cacio e Pepe, Amatriciana, Gricia — obsahuje POUZE sýr a černý pepř?",
+    options: ["Carbonara", "Amatriciana", "Gricia", "Cacio e Pepe"],
+    correctAnswer: "Cacio e Pepe",
+  },
+  "sauces-40": {
+    question:
+      "Tradiční bolognské ragù, oficiálně zaregistrované v roce 1982, NEOBSAHUJE ingredienci, která se běžně přidává v moderních receptech. Jakou?",
+    options: ["Celer", "Bílé víno", "Plnotučné mléko", "Česnek"],
+    correctAnswer: "Česnek",
+  },
+
+  "sauces-41": {
+    question: 'Co je "pasta in bianco"?',
+    options: [
+      "Těstoviny s bešamelovou omáčkou",
+      "Těstoviny se smetanou a parmazánem",
+      "Těstoviny podávané jen s máslem nebo olivovým olejem",
+      "Těstoviny s lehkou rajčatovou omáčkou",
+    ],
+    correctAnswer: "Těstoviny podávané jen s máslem nebo olivovým olejem",
+  },
+  "sauces-42": {
+    question: 'V italské přípravě omáček je "battuto" přípravný krok. Co označuje?',
+    options: [
+      "Redukování omáčky vařením",
+      "Přecezení hotové omáčky",
+      "Přidání vývaru do pánve",
+      "Jemně nasekaná aromatická zelenina (cibule, celer, mrkev, česnek) před přidáním do pánve",
+    ],
+    correctAnswer:
+      "Jemně nasekaná aromatická zelenina (cibule, celer, mrkev, česnek) před přidáním do pánve",
+  },
+  "sauces-43": {
+    question:
+      "Pasta Primavera jsou těstoviny s různou čerstvou zeleninou. Ve které zemi byla vynalezena?",
+    options: ["Itálie", "Francie", "Kanada", "Spojené státy americké"],
+    correctAnswer: "Spojené státy americké",
+  },
+  "sauces-44": {
+    question: 'Pasta alla Norma používá "ricotta salata". Jaký druh sýra to je?',
+    options: [
+      "Měkká čerstvá ricotta ochucená bylinkami",
+      "Uzená ricotta z Kalábrie",
+      "Šlehaná ricotta smíchaná se smetanou",
+      "Vyzrálá, osolená a lisovaná ricotta",
+    ],
+    correctAnswer: "Vyzrálá, osolená a lisovaná ricotta",
+  },
+
   // --- ORIGINS ---
   "origins-1": {
     question: 'Z jakého italského města pochází klasický těstovinový pokrm "Carbonara"?',
@@ -515,6 +718,99 @@ export const questionsCz: Record<string, QuestionTranslation> = {
     question: "Který italský ostrov je historicky považován za kolébku výroby sušených těstovin?",
     options: ["Sardinie", "Elba", "Pantelleria", "Sicílie"],
     correctAnswer: "Sicílie",
+  },
+
+  "origins-31": {
+    question: 'Co doslova znamená slovo "pasta" v italštině?',
+    options: ["Jídlo", "Mouka", "Nudle", "Těsto nebo pasta"],
+    correctAnswer: "Těsto nebo pasta",
+  },
+  "origins-32": {
+    question:
+      'Které italské město nese, díky svému výjimečně bohaté kulinářské tradici, přezdívku "La Grassa" (Tučná)?',
+    options: ["Řím", "Milán", "Florencie", "Boloňa"],
+    correctAnswer: "Boloňa",
+  },
+  "origins-33": {
+    question:
+      "Populární mýtus, že Marco Polo přivezl těstoviny do Itálie z Číny, je považován za nepravdivý. Proč?",
+    options: [
+      "Marco Polo nikdy nebyl v Číně",
+      "Čínské nudle se vyrábí z rýže, ne z pšenice",
+      "Marco Polo přivezl rýži, ne těstoviny",
+      "Těstoviny v Itálii existovaly již před cestami Marca Pola",
+    ],
+    correctAnswer: "Těstoviny v Itálii existovaly již před cestami Marca Pola",
+  },
+  "origins-34": {
+    question:
+      "Boloňská obchodní komora zaregistrovala oficiální šířku tagliatelle jako přesný zlomek výšky místní dominanty. Které?",
+    options: ["Bazilika San Petronio", "Neptunova fontána", "Palazzo d'Accursio", "Věž Asinelli"],
+    correctAnswer: "Věž Asinelli",
+  },
+  "origins-35": {
+    question:
+      "V městečku Amatrice se Amatriciana původně připravovala s jinou těstovinou než je bucatini oblíbené v Římě. Která to byla?",
+    options: ["Rigatoni", "Pennette", "Tonnarelli", "Spaghetti"],
+    correctAnswer: "Spaghetti",
+  },
+  "origins-36": {
+    question:
+      'Která italská kuchařka z roku 1891 s názvem "La Scienza in cucina e l\'Arte di mangiare bene" pomohla kodifikovat a zpopularizovat mnohé klasické recepty na těstoviny?',
+    options: ["Ada Boni", "Ippolito Cavalcanti", "Bartolomeo Scappi", "Pellegrino Artusi"],
+    correctAnswer: "Pellegrino Artusi",
+  },
+  "origins-37": {
+    question:
+      "Stringozzi (také zvané strangozzi), ručně válené těstoviny podobné silným spaghetti, jsou specialitou jakého regionu?",
+    options: ["Lazio", "Marche", "Abruzzo", "Umbrie"],
+    correctAnswer: "Umbrie",
+  },
+  "origins-38": {
+    question:
+      '"Malloreddus", někdy nazývané "sardinské gnocchi", jsou těstovinová specialita jakého ostrova?',
+    options: ["Sicílie", "Elba", "Capri", "Sardinie"],
+    correctAnswer: "Sardinie",
+  },
+  "origins-39": {
+    question:
+      "Pansotti, trojúhelníkové plněné těstoviny s divokými bylinkami a ricottou, jsou tradiční pokrm italského regionu. Jakého?",
+    options: ["Toskánsko", "Piemont", "Benátsko", "Liguria"],
+    correctAnswer: "Liguria",
+  },
+  "origins-40": {
+    question:
+      "Který italský kuchař a spisovatel ze 16. století zaznamenal jedny z nejstarších známých receptů na těstoviny, včetně čerstvých vaječných těstovin válených válečkem?",
+    options: [
+      "Pellegrino Artusi",
+      "Christofaro di Messisbugo",
+      "Ippolito Cavalcanti",
+      "Bartolomeo Scappi",
+    ],
+    correctAnswer: "Bartolomeo Scappi",
+  },
+
+  "origins-41": {
+    question: "V jaké části světa bylo rajče původně pěstováno, než bylo přivezeno do Evropy?",
+    options: ["Afrika", "Indie", "Čína", "Amerika"],
+    correctAnswer: "Amerika",
+  },
+  "origins-42": {
+    question: "Pravda nebo nepravda: Itálie je největším světovým exportérem těstovin.",
+    options: ["Pravda", "Nepravda"],
+    correctAnswer: "Pravda",
+  },
+  "origins-43": {
+    question:
+      'Slavný prvoaprílový podvod z roku 1957 "sklizeň špaget" — zobrazující švýcarské rodiny sklízející špagety ze stromů — byl odvysílán jakým televizním pořadem?',
+    options: ["CBS Evening News", "ITV News at Ten", "NBC Nightly News", "BBC Panorama"],
+    correctAnswer: "BBC Panorama",
+  },
+  "origins-44": {
+    question:
+      "Jeden z nejstarších evropských písemných odkazů na těstoviny pochází z geografického díla z roku 1154, které popisuje jejich výrobu na Sicílii. Kdo byl jeho arabsko-normanský autor?",
+    options: ["Ibn Battuta", "Al-Masudi", "Al-Idrisi", "Ibn Khaldun"],
+    correctAnswer: "Al-Idrisi",
   },
 
   // --- COOKING ---
@@ -720,5 +1016,118 @@ export const questionsCz: Record<string, QuestionTranslation> = {
       "Řemeslné sušené těstoviny z bronzových forem",
     ],
     correctAnswer: "Řemeslné sušené těstoviny z bronzových forem",
+  },
+  "cooking-31": {
+    question: "Proč je důležité vařit těstoviny ve velkém hrnci s dostatkem vody?",
+    options: [
+      "Aby vznikalo více páry",
+      "Aby se vařily rychleji",
+      "Aby se přidalo více soli",
+      "Aby se těstoviny volně pohybovaly a vařily rovnoměrně",
+    ],
+    correctAnswer: "Aby se těstoviny volně pohybovaly a vařily rovnoměrně",
+  },
+  "cooking-32": {
+    question: "Kdy je správný okamžik pro smíchání uvařených těstovin s omáčkou?",
+    options: [
+      "Po propláchnutí studenou vodou",
+      "Jakmile trochu vychladnou",
+      "Po přeložení do talíře",
+      "Ihned po scezení, přímo v pánvi s omáčkou",
+    ],
+    correctAnswer: "Ihned po scezení, přímo v pánvi s omáčkou",
+  },
+  "cooking-33": {
+    question: "Jaká je obecná zásada pro párování tvarů těstovin s omáčkami?",
+    options: [
+      "Všechny těstoviny fungují stejně dobře s jakoukoliv omáčkou",
+      "Čerstvé těstoviny vždy se smetanou; sušené s rajčaty",
+      "Dlouhé těstoviny jsou vždy nejlepší s kousky plnými omáčkami",
+      "Tenké, jemné těstoviny se hodí k lehkým omáčkám; silné nebo rýhované k těžším omáčkám",
+    ],
+    correctAnswer:
+      "Tenké, jemné těstoviny se hodí k lehkým omáčkám; silné nebo rýhované k těžším omáčkám",
+  },
+  "cooking-34": {
+    question: "Při přípravě Carbonary — kdy se má přidat směs vejce a sýra k těstovinám?",
+    options: [
+      "Dokud je pánev stále na vysokém plameni",
+      "Před scezením těstovin",
+      "Po přidání ledové vody z těstovin",
+      "Jakmile je pánev odstavena z ohně",
+    ],
+    correctAnswer: "Jakmile je pánev odstavena z ohně",
+  },
+  "cooking-35": {
+    question:
+      "Proč byste měli pro Cacio e Pepe nejprve vytvořit krém ze sýra a vody z těstovin — místo přidání sýra přímo do horké pánve?",
+    options: [
+      "Aby byla omáčka méně slaná",
+      "Aby měla omáčka větší objem",
+      "Aby těstoviny nevstřebaly příliš mnoho omáčky",
+      "Aby se sýr nesrazil a netvořil hrudky",
+    ],
+    correctAnswer: "Aby se sýr nesrazil a netvořil hrudky",
+  },
+  "cooking-36": {
+    question:
+      "Jak se nazývá zkušená výrobkyně těstovinových plátů v tradici ručního válení z Emilia-Romagna?",
+    options: ["Pastaia", "Cuoca", "Arzdora", "Sfoglina"],
+    correctAnswer: "Sfoglina",
+  },
+  "cooking-37": {
+    question:
+      "Která chemická reakce dává zapečeným nebo opečeným těstovinám zlatohnědou barvu a oříškovou chuť?",
+    options: ["Karamelizace", "Oxidace", "Gelatinizace škrobu", "Maillardova reakce"],
+    correctAnswer: "Maillardova reakce",
+  },
+  "cooking-38": {
+    question:
+      "Pravda nebo nepravda: těstoviny z krupice tvrdé pšenice mají nižší glykemický index než těstoviny z měkké pšeničné mouky.",
+    options: ["Pravda", "Nepravda"],
+    correctAnswer: "Pravda",
+  },
+  "cooking-39": {
+    question:
+      "Na obalu je uvedena doba vaření 8 minut, ale chcete těstoviny dokončit v pánvi s omáčkou. O kolik minut dříve byste je měli scedit?",
+    options: ["O 30 sekund dříve", "O 3 minuty dříve", "O 4 minuty dříve", "O 1–2 minuty dříve"],
+    correctAnswer: "O 1–2 minuty dříve",
+  },
+  "cooking-40": {
+    question:
+      "Které z následujících tvrzení o celozrnných těstovinách (pasta integrale) je pravdivé?",
+    options: [
+      "Vaří se rychleji než obyčejné těstoviny",
+      "Musí se podávat pouze s rajčatovou omáčkou",
+      "Nepotřebují sůl ve vodě na vaření",
+      "Obsahují více vlákniny a mají oříškovější chuť než těstoviny z bílé mouky",
+    ],
+    correctAnswer: "Obsahují více vlákniny a mají oříškovější chuť než těstoviny z bílé mouky",
+  },
+  "cooking-41": {
+    question: 'Co znamená italské sloveso "scolare" v kontextu vaření těstovin?',
+    options: ["Osolit vodu", "Promíchat těstoviny", "Naservírovat těstoviny", "Scedit těstoviny"],
+    correctAnswer: "Scedit těstoviny",
+  },
+  "cooking-42": {
+    question: 'Co je "pasta fredda"?',
+    options: [
+      "Nedovařené těstoviny podávané okamžitě",
+      "Těstoviny, které byly uchovány v lednici a znovu ohřáty",
+      "Těstoviny vařené bez tepla, namáčením ve studené vodě",
+      "Studený těstovinový salát, typicky se zeleninou a olivovým olejem",
+    ],
+    correctAnswer: "Studený těstovinový salát, typicky se zeleninou a olivovým olejem",
+  },
+  "cooking-43": {
+    question:
+      "Řemeslné těstoviny z bronzových forem se suší při nízké teplotě (45–50 °C) až 50 hodin, ve srovnání s průmyslovým sušením při vysoké teplotě. Proč?",
+    options: [
+      "Protože bronz příliš rychle vede teplo při vyšších teplotách",
+      "Aby se snížily výrobní náklady",
+      "Aby těstoviny lépe odolávaly lámání při balení",
+      "Aby se zachovaly bílkoviny a škroby a rozvinula se hlubší, oříškovější chuť",
+    ],
+    correctAnswer: "Aby se zachovaly bílkoviny a škroby a rozvinula se hlubší, oříškovější chuť",
   },
 };
