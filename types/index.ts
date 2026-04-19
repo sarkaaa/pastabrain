@@ -27,7 +27,9 @@ export type QuizSession = {
 export type AnswerState = "unanswered" | "correct" | "incorrect";
 
 export type IncorrectAnswer = {
+  questionId: string;
   question: string;
   userAnswer: string;
+  userAnswerOptionIndex?: number;
   correctAnswer: string;
 };

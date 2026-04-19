@@ -20,17 +20,21 @@ type DifficultyOption = {
 
 export default function HomePage() {
   const { t } = useLang();
-  const [difficulty, setDifficulty] = useState<DifficultyFilter>(() => {
-    if (typeof window === "undefined") return "all";
-    const saved = localStorage.getItem("difficulty");
-    return saved && (["all", "easy", "medium", "hard"] as string[]).includes(saved)
-      ? (saved as DifficultyFilter)
-      : "all";
-  });
+  const [difficulty, setDifficulty] = useState<DifficultyFilter>("all");
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem("difficulty", difficulty);
-  }, [difficulty]);
+    const saved = localStorage.getItem("difficulty");
+    if (saved && (["all", "easy", "medium", "hard"] as string[]).includes(saved)) {
+      setDifficulty(saved as DifficultyFilter);
+    }
+    setHydrated(true);
+  }, []);
+
+  function handleDifficultyChange(value: DifficultyFilter) {
+    setDifficulty(value);
+    localStorage.setItem("difficulty", value);
+  }
 
   const difficultyOptions: DifficultyOption[] = [
     {
@@ -83,9 +87,9 @@ export default function HomePage() {
               <button
                 key={opt.id}
                 type="button"
-                onClick={() => setDifficulty(opt.id)}
+                onClick={() => handleDifficultyChange(opt.id)}
                 className={`flex-1 cursor-pointer rounded-xl border-2 px-3 py-2 font-semibold text-sm capitalize transition-all ${
-                  difficulty === opt.id
+                  hydrated && difficulty === opt.id
                     ? opt.activeClass
                     : "border-stone-200 bg-white text-stone-600 hover:border-stone-300 dark:border-stone-700 dark:bg-stone-900 dark:text-stone-400 dark:hover:border-stone-600"
                 }`}

@@ -1,80 +1,39 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { useCallback, useEffect, useMemo, useState } from "react";
 import { useLang } from "@/components/LangProvider";
 import { ProgressBar } from "@/components/ProgressBar";
 import { QuizCard } from "@/components/QuizCard";
 import { ScoreScreen } from "@/components/ScoreScreen";
-import { questions as allQuestions } from "@/data/questions";
-import { applyTranslations, getQuizQuestions } from "@/lib/shuffleQuestions";
-import type { Category, DifficultyFilter, IncorrectAnswer, Question } from "@/types";
-
-const QUESTIONS_PER_QUIZ = 10;
+import type { Category, DifficultyFilter } from "@/types";
+import { useQuiz } from "./useQuiz";
 
 export function QuizPageContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const { lang, t } = useLang();
+  const { t } = useLang();
 
   const rawCategory = searchParams.get("category") ?? "all";
-  const category: Category | "all" = (
+  const category = (
     ["all", "shapes", "sauces", "origins", "cooking"].includes(rawCategory) ? rawCategory : "all"
   ) as Category | "all";
 
   const rawDifficulty = searchParams.get("difficulty") ?? "all";
-  const difficulty: DifficultyFilter = (
+  const difficulty = (
     ["all", "easy", "medium", "hard"].includes(rawDifficulty) ? rawDifficulty : "all"
   ) as DifficultyFilter;
 
-  const [questions, setQuestions] = useState<Question[]>([]);
-  const translatedQuestions = useMemo(() => applyTranslations(questions, lang), [questions, lang]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [score, setScore] = useState(0);
-  const [incorrectAnswers, setIncorrectAnswers] = useState<IncorrectAnswer[]>([]);
-  const [answered, setAnswered] = useState(false);
-  const [finished, setFinished] = useState(false);
-
-  const initQuiz = useCallback(() => {
-    const selected = getQuizQuestions(allQuestions, category, QUESTIONS_PER_QUIZ, difficulty);
-    setQuestions(selected);
-    setCurrentIndex(0);
-    setScore(0);
-    setIncorrectAnswers([]);
-    setAnswered(false);
-    setFinished(false);
-  }, [category, difficulty]);
-
-  useEffect(() => {
-    initQuiz();
-  }, [initQuiz]);
-
-  function handleAnswer(isCorrect: boolean, answer: string) {
-    const question = translatedQuestions[currentIndex];
-    if (isCorrect) {
-      setScore((s) => s + 1);
-    } else {
-      setIncorrectAnswers((prev) => [
-        ...prev,
-        {
-          question: question.question,
-          userAnswer: answer,
-          correctAnswer: question.correctAnswer,
-        },
-      ]);
-    }
-    setAnswered(true);
-  }
-
-  function handleNext() {
-    const nextIndex = currentIndex + 1;
-    if (nextIndex >= questions.length) {
-      setFinished(true);
-    } else {
-      setCurrentIndex(nextIndex);
-      setAnswered(false);
-    }
-  }
+  const {
+    translatedQuestions,
+    translatedIncorrectAnswers,
+    currentIndex,
+    score,
+    answered,
+    finished,
+    initQuiz,
+    handleAnswer,
+    handleNext,
+  } = useQuiz(category, difficulty);
 
   if (translatedQuestions.length === 0) {
     return (
@@ -121,7 +80,7 @@ export function QuizPageContent() {
           <ScoreScreen
             score={score}
             total={translatedQuestions.length}
-            incorrectAnswers={incorrectAnswers}
+            incorrectAnswers={translatedIncorrectAnswers}
             onRetry={initQuiz}
           />
         )}
