@@ -10,7 +10,7 @@ export const questions: Question[] = [
     correctAnswer: "Vermicelli",
     category: "shapes",
     difficulty: "medium",
-    image: "/pasta/vermicelli.svg",
+    image: "/pasta/vermicelli.jpg",
   },
   {
     id: "shapes-2",
@@ -20,7 +20,7 @@ export const questions: Question[] = [
     correctAnswer: "Butterflies",
     category: "shapes",
     difficulty: "easy",
-    image: "/pasta/farfalle.svg",
+    image: "/pasta/farfalle.jpg",
   },
   {
     id: "shapes-3",
@@ -30,7 +30,7 @@ export const questions: Question[] = [
     correctAnswer: "Penne",
     category: "shapes",
     difficulty: "easy",
-    image: "/pasta/penne.svg",
+    image: "/pasta/penne.jpg",
   },
   {
     id: "shapes-4",
@@ -40,7 +40,7 @@ export const questions: Question[] = [
     aliases: ["Lasagne"],
     category: "shapes",
     difficulty: "easy",
-    image: "/pasta/lasagna.svg",
+    image: "/pasta/lasagna.jpeg",
   },
   {
     id: "shapes-5",
@@ -50,7 +50,7 @@ export const questions: Question[] = [
     correctAnswer: "Orzo",
     category: "shapes",
     difficulty: "medium",
-    image: "/pasta/orzo.svg",
+    image: "/pasta/orzo.jpg",
   },
   {
     id: "shapes-6",
@@ -59,7 +59,7 @@ export const questions: Question[] = [
     correctAnswer: "Fusilli",
     category: "shapes",
     difficulty: "easy",
-    image: "/pasta/fusilli.svg",
+    image: "/pasta/fusilli.jpg",
   },
   {
     id: "shapes-7",
@@ -69,7 +69,7 @@ export const questions: Question[] = [
     correctAnswer: "Orecchiette",
     category: "shapes",
     difficulty: "medium",
-    image: "/pasta/orecchiette.svg",
+    image: "/pasta/orecchiette.jpeg",
   },
   {
     id: "shapes-8",
@@ -80,7 +80,7 @@ export const questions: Question[] = [
     correctAnswer: "True",
     category: "shapes",
     difficulty: "easy",
-    image: "/pasta/rigatoni.svg",
+    image: "/pasta/rigatoni.jpg",
   },
 
   {
@@ -90,7 +90,7 @@ export const questions: Question[] = [
     correctAnswer: "Spaghetti",
     category: "shapes",
     difficulty: "easy",
-    image: "/pasta/spaghetti.svg",
+    image: "/pasta/spaghetti.jpeg",
   },
   {
     id: "shapes-10",
@@ -100,7 +100,7 @@ export const questions: Question[] = [
     correctAnswer: "Linguine",
     category: "shapes",
     difficulty: "medium",
-    image: "/pasta/linguine.svg",
+    image: "/pasta/linguine.webp",
   },
   {
     id: "shapes-11",
@@ -110,7 +110,7 @@ export const questions: Question[] = [
     correctAnswer: "Tagliatelle",
     category: "shapes",
     difficulty: "medium",
-    image: "/pasta/tagliatelle.svg",
+    image: "/pasta/tagliatelle.jpg",
   },
   {
     id: "shapes-12",
@@ -121,7 +121,7 @@ export const questions: Question[] = [
     correctAnswer: "Tortellini",
     category: "shapes",
     difficulty: "easy",
-    image: "/pasta/tortellini.svg",
+    image: "/pasta/tortellini.jpeg",
   },
   {
     id: "shapes-13",
@@ -136,7 +136,7 @@ export const questions: Question[] = [
     correctAnswer: "It has a hollow hole running through the centre",
     category: "shapes",
     difficulty: "medium",
-    image: "/pasta/bucatini.svg",
+    image: "/pasta/bucatini.jpg",
   },
   {
     id: "shapes-14",
@@ -145,7 +145,7 @@ export const questions: Question[] = [
     correctAnswer: "Conchiglie",
     category: "shapes",
     difficulty: "medium",
-    image: "/pasta/conchiglie.svg",
+    image: "/pasta/conchiglie.webp",
   },
   {
     id: "shapes-15",
@@ -155,7 +155,7 @@ export const questions: Question[] = [
     correctAnswer: "Corkscrew",
     category: "shapes",
     difficulty: "hard",
-    image: "/pasta/cavatappi.svg",
+    image: "/pasta/cevatappi.jpg",
   },
 
   {
@@ -166,7 +166,7 @@ export const questions: Question[] = [
     aliases: ["Little ribbon", "Small ribbons", "Ribbons"],
     category: "shapes",
     difficulty: "medium",
-    image: "/pasta/fettuccine.svg",
+    image: "/pasta/fettuccine.png",
   },
   {
     id: "shapes-17",
@@ -176,7 +176,7 @@ export const questions: Question[] = [
     correctAnswer: "To gobble up",
     category: "shapes",
     difficulty: "hard",
-    image: "/pasta/pappardelle.svg",
+    image: "/pasta/pappardelle.webp",
   },
   {
     id: "shapes-18",
@@ -186,7 +186,7 @@ export const questions: Question[] = [
     aliases: ["Elbow macaroni", "Gomiti", "Elbow pasta"],
     category: "shapes",
     difficulty: "easy",
-    image: "/pasta/macaroni.svg",
+    image: "/pasta/macaroni.png",
   },
   {
     id: "shapes-19",
@@ -196,7 +196,7 @@ export const questions: Question[] = [
     correctAnswer: "Ravioli",
     category: "shapes",
     difficulty: "easy",
-    image: "/pasta/ravioli.svg",
+    image: "/pasta/ravioli.png",
   },
   {
     id: "shapes-20",
@@ -207,7 +207,7 @@ export const questions: Question[] = [
     correctAnswer: "Capellini",
     category: "shapes",
     difficulty: "medium",
-    image: "/pasta/capellini.svg",
+    image: "/pasta/capellini.jpg",
   },
   {
     id: "shapes-21",
@@ -217,7 +217,7 @@ export const questions: Question[] = [
     correctAnswer: "Little thimbles",
     category: "shapes",
     difficulty: "medium",
-    image: "/pasta/ditalini.svg",
+    image: "/pasta/ditalini.jpg",
   },
   {
     id: "shapes-22",
@@ -233,7 +233,7 @@ export const questions: Question[] = [
     correctAnswer: "Princess Mafalda of Savoy",
     category: "shapes",
     difficulty: "hard",
-    image: "/pasta/mafaldine.svg",
+    image: "/pasta/mafaldine.png",
   },
   {
     id: "shapes-23",
@@ -244,7 +244,7 @@ export const questions: Question[] = [
     correctAnswer: "Liguria",
     category: "shapes",
     difficulty: "hard",
-    image: "/pasta/trofie.svg",
+    image: "/pasta/trofie.webp",
   },
   {
     id: "shapes-24",
